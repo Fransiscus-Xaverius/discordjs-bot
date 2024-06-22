@@ -1,0 +1,12 @@
+{
+  "name": "discordjs-bot",
+  "version": "1.0.0",
+  "description": "A discord.js bot template with music playing abilities, booru features and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

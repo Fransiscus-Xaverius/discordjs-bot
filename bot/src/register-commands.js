@@ -1,11 +1,15 @@
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
-require('dotenv').config();
+const { description } = require('./commands/hello');
+const { ApplicationCommandOptionType } = require('discord.js');
+require('dotenv').config({path:'/bot/.env'});
 
 //Get token, clientId, and Guild ID from .env
-const token = process.env.DISCORD_BOT_TOKEN;
-const clientId = process.env.CLIENT_ID;
-const guildId = process.env.GUILD_ID;
+const token = ""
+const clientId = "";
+const guildId = "";
+
+console.log(process.env)
 
 // List of Commands
 const commands = [
@@ -16,6 +20,18 @@ const commands = [
   {
     name: 'hello',
     description: 'Replies with Hello!'
+  },
+  {
+    name: 'play-youtube',
+    description: 'Plays a YouTube video audio in voice channel',
+    options: [
+      {
+        name: 'url',
+        description: 'The URL of the YouTube video',
+        type: ApplicationCommandOptionType.String,
+        required: true
+      }
+    ]
   }
 ];
 
